@@ -1,0 +1,26 @@
+#left-panel {
+	display: inline-block;
+}
+#right-panel {
+	display: inline-block;
+}
+#icon-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#side-nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#top-nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#page-contents {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
