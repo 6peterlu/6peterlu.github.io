@@ -1,25 +1,51 @@
+body {
+	margin: 0;
+}
 #left-panel {
-	display: inline-block;
+	float: left;
+	width: 10vw;
+	font-size: 1rem;
 }
 #right-panel {
-	display: inline-block;
+	float: left;
+	width: 90vw;
+	font-size: 1rem;
 }
 #icon-area {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 16vh;
+	background-color: BlanchedAlmond;
 }
 #side-nav-bar {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	height: 84vh;
 }
 #top-nav-bar {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
+	height: 16vh;
 }
 #page-contents {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: BlanchedAlmond;
+}
+.side-nav-button {
+	background-color: DarkCyan;
+	height: 20%;
+	max-width: 100%;
+	padding: 1vh 1vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.top-nav-button {
+	background-color: DarkCyan;
+	height: 100%;
+	width: 20%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
