@@ -1,13 +1,21 @@
+html {
+	height: 100%;
+ 	width: 100%;
+ 	overflow: hidden;
+}
 body {
+	height: 100%;
+ 	overflow: auto;
+ 	-webkit-overflow-scrolling: touch; /* https://codepen.io/itsjustluck/pen/xOyjqN */
 	margin: 0;
 }
 #left-panel {
-	float: left;
+	position: fixed;
 	width: 10vw;
 	font-size: 1rem;
 }
 #right-panel {
-	float: left;
+	float: right;
 	width: 90vw;
 	font-size: 1rem;
 }
@@ -32,6 +40,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: BlanchedAlmond;
+	height: 100vh;
 }
 .side-nav-button {
 	background-color: DarkCyan;
