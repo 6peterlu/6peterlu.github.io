@@ -6,7 +6,7 @@ html {
 body {
 	height: 100%;
  	overflow: auto;
- 	-webkit-overflow-scrolling: touch; /* https://codepen.io/itsjustluck/pen/xOyjqN */
+ 	-webkit-overflow-scrolling: touch; /* disabling overscrolling: https://codepen.io/itsjustluck/pen/xOyjqN */
 	margin: 0;
 }
 #left-panel {
@@ -42,9 +42,9 @@ body {
 	background-color: BlanchedAlmond;
 	height: 100vh;
 }
+
 .side-nav-button {
-	background-color: DarkCyan;
-	height: 20%;
+	height: 33%;
 	max-width: 100%;
 	padding: 1vh 1vw;
 	display: flex;
@@ -58,4 +58,16 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.font-monospace {
+	font-family: 'PT Mono', monospace;
+}
+.color-olive {
+	color: #A3BFA8;
+}
+.color-cherry {
+	color: #CE4257;
+}
+.color-sky {
+	color: #7EB2DD;
 }
