@@ -3,42 +3,54 @@
 	<head>
 		<link rel="stylesheet" href="style.css"/>
 		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+		<script src="js/app.js" defer></script>
+		<script src="js/script.js" defer></script>
 	</head>
 	<body>
-		<div id="left-panel">
-			<section id="icon-area">
-				icons here
-			</section>
+		<nav id="left-panel">
 			<section id="side-nav-bar">
-				<div class="side-nav-button font-monospace color-cherry">
-					button #1
+				<div id="tab-hello" class="side-nav-button font-monospace color-cherry">
+					<p>[1] hello</p>
 				</div>
-				<div class="side-nav-button font-monospace color-sky">
-					button #2
+				<div id="tab-work" class="side-nav-button font-monospace color-sky">
+					<p>[2] work</p>
 				</div>
-				<div class="side-nav-button font-monospace color-olive">
-					button #3
+				<div id="tab-not-work" class="side-nav-button font-monospace color-olive">
+					<p>[3] not work</p>
 				</div>
 			</section>
-		</div>
+			<section id="icon-area">
+				<a href="https://github.com/6peterlu">
+					<img id="github-logo" src="res/github_black_transparent.png"/>
+				</a>
+				<a href="https://www.linkedin.com/in/peter-lu/">
+					<img id="linkedin-logo" src="res/linkedin_black_transparent.png"/>
+				</a>
+			</section>
+		</nav>
 		
 		<div id="right-panel">
-			<section id="top-nav-bar">
-				<div class="top-nav-button">
-					subtopic #1
+			<section id="panel-hello">
+				<div id="text-panel" class="color-background-cherry">
+					<h1>Hi, I'm Peter!</h1>
 				</div>
-				<div class="top-nav-button">
-					subtopic #2
+				<div id="text-panel" class="color-background-cherry">
+					<p>If you're a recruiter, check out the work tab. You can navigate by clicking or with the number keys.</p>
 				</div>
-				<div class="top-nav-button">
-					subtopic #3
-				</div>
-				<div class="top-nav-button">
-					subtopic #4
+				<div id="text-panel" class="color-background-cherry">
+					<p>If you're just interested in things I do for fun, or are a recruiter who is bored, check out the not work tab!</p>
 				</div>
 			</section>
-			<section id = "page-contents">
-				sample text
+			<section id="panel-work" class="inactive">
+				<div id="text-panel" class="color-background-sky">
+					<h1>werk werk werk</h1>
+				</div>
+			</section>
+			<section id="panel-not-work" class="inactive">
+				<div id="text-panel" class="color-background-olive">
+					<h1>play!</h1>
+				</div>
 			</section>
 		</div>
 	</body>

@@ -9,40 +9,50 @@ body {
  	-webkit-overflow-scrolling: touch; /* disabling overscrolling: https://codepen.io/itsjustluck/pen/xOyjqN */
 	margin: 0;
 }
+p {
+	font-family: 'PT Mono', monospace;
+}
+h1 {
+	font-family: 'Cairo', sans-serif;
+}
 #left-panel {
 	position: fixed;
-	width: 10vw;
+	width: 20vw;
 	font-size: 1rem;
 }
 #right-panel {
 	float: right;
-	width: 90vw;
+	width: 75vw;
 	font-size: 1rem;
+	text-align: center;
+	margin: 5vh 3.125vw;
 }
 #icon-area {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	height: 16vh;
-	background-color: BlanchedAlmond;
+	justify-content: space-around;
+	height: 20vh;
 }
 #side-nav-bar {
-	height: 84vh;
+	height: 80vh;
 }
-#top-nav-bar {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	height: 16vh;
-}
-#page-contents {
+#text-panel {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: BlanchedAlmond;
-	height: 100vh;
+	margin: 5vh 0vw;
+	padding: 5vh 4vw;
 }
-
+#github-logo, #linkedin-logo {
+	width: 6vw;
+	height: auto;
+	transition: all 200ms ease-out;
+}
+#github-logo:hover, #linkedin-logo:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: all 200ms ease-out;
+	cursor: pointer;
+}
 .side-nav-button {
 	height: 33%;
 	max-width: 100%;
@@ -50,17 +60,12 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: all 200ms ease-out;
 }
-.top-nav-button {
-	background-color: DarkCyan;
-	height: 100%;
-	width: 20%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.font-monospace {
-	font-family: 'PT Mono', monospace;
+.side-nav-button:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: all 200ms ease-out;
+	cursor: pointer;
 }
 .color-olive {
 	color: #A3BFA8;
@@ -70,4 +75,19 @@ body {
 }
 .color-sky {
 	color: #7EB2DD;
+}
+.color-background-olive {
+	background-color: #A3BFA8;
+	color: #FFFFFF;
+}
+.color-background-cherry {
+	background-color: #CE4257;
+	color: #FFFFFF;
+}
+.color-background-sky {
+	background-color: #7EB2DD;
+	color: #FFFFFF;
+}
+.inactive {
+	display: none;
 }
