@@ -6,7 +6,7 @@ html {
 body {
 	height: 100%;
  	overflow: auto;
- 	-webkit-overflow-scrolling: touch; /* disabling overscrolling: https://codepen.io/itsjustluck/pen/xOyjqN */
+ 	/*-webkit-overflow-scrolling: touch; /* disabling overscrolling: https://codepen.io/itsjustluck/pen/xOyjqN */
 	margin: 0;
 }
 p {
@@ -28,7 +28,7 @@ h1 {
 	margin: 5vh 3.125vw;
 }
 #icon-area {
-	display: flex;
+	display:flex;
 	align-items: center;
 	justify-content: space-around;
 	height: 20vh;
@@ -47,16 +47,15 @@ h1 {
 	width: 6vw;
 	height: auto;
 	transition: all 200ms ease-out;
+	opacity: 0.6;
 }
 #github-logo:hover, #linkedin-logo:hover {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	opacity:1;
 	transition: all 200ms ease-out;
-	cursor: pointer;
 }
 .side-nav-button {
 	height: 33%;
 	max-width: 100%;
-	padding: 1vh 1vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -90,4 +89,21 @@ h1 {
 }
 .inactive {
 	display: none;
+}
+
+@media (max-width: 400px) {
+	#icon-area {
+		flex-direction: column;
+	}
+	#github-logo, #linkedin-logo {
+		width: 10vw;
+	}
+	.side-nav-button p{
+		transform: rotate(-90deg);
+		font-size: 1rem;
+		white-space: nowrap;
+	}
+	#right-panel {
+		margin: 0;
+	}
 }
