@@ -93,8 +93,10 @@ h1 {
 
 @media (max-width: 400px) {
 	#icon-area {
+		height: 100%;
 		flex-direction: column;
-		padding-bottom: 44px; /* for safari -.- */
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
 	}
 	#github-logo, #linkedin-logo {
 		width: 10vw;
