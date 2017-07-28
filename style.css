@@ -26,6 +26,7 @@ h1 {
 	font-size: 1rem;
 	text-align: center;
 	margin: 5vh 3.125vw;
+	-webkit-overflow-scrolling: touch;
 }
 #icon-area {
 	display:flex;
