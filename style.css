@@ -94,6 +94,7 @@ h1 {
 @media (max-width: 400px) {
 	#icon-area {
 		flex-direction: column;
+		padding-bottom: 44px; /* for safari -.- */
 	}
 	#github-logo, #linkedin-logo {
 		width: 10vw;
