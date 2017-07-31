@@ -139,7 +139,7 @@ a:hover {
 	display: none;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
 	#icon-area {
 		flex-direction: column;
 	}
@@ -153,5 +153,8 @@ a:hover {
 	}
 	#right-panel {
 		margin: 0;
+	}
+	#expand-panel-title:hover, .expand-panel-title-active {
+		transform: scale(1,1);
 	}
 }
