@@ -8,6 +8,8 @@ class App {
 		this.workSpanMouseout = this.workSpanMouseout.bind(this);
 		this.notWorkSpanMouseover = this.notWorkSpanMouseover.bind(this);
 		this.notWorkSpanMouseout = this.notWorkSpanMouseout.bind(this);
+		this.linkMouseover = this.linkMouseover.bind(this);
+		this.linkMouseout = this.linkMouseout.bind(this);
 		this.expandContent = this.toggleContent.bind(this);
 
 		this.helloButton = document.querySelector("#tab-hello");
@@ -17,12 +19,9 @@ class App {
 		this.workPanel = document.querySelector("#panel-work");
 		this.notWorkPanel = document.querySelector("#panel-not-work");
 
-		const helloButton = document.querySelector("#tab-hello");
-		helloButton.addEventListener("click", this.switchToHello);
-		const workButton = document.querySelector("#tab-work");
-		workButton.addEventListener("click", this.switchToWork);
-		const notWorkButton = document.querySelector("#tab-not-work");
-		notWorkButton.addEventListener("click", this.switchToNotWork);
+		this.helloButton.addEventListener("click", this.switchToHello);
+		this.workButton.addEventListener("click", this.switchToWork);
+		this.notWorkButton.addEventListener("click", this.switchToNotWork);
 
 		const workSpan = document.querySelector("#span-work");
 		workSpan.addEventListener("mouseenter", this.workSpanMouseover);
@@ -33,10 +32,15 @@ class App {
 		notWorkSpan.addEventListener("mouseout", this.notWorkSpanMouseout);
 
 		const expandPanels = document.querySelectorAll("#expand-panel");
-		console.log(expandPanels);
 		for (const expandPanel of expandPanels) {
-			console.log(expandPanel);
 			expandPanel.addEventListener("click", this.toggleContent);
+		}
+
+		const links = document.querySelectorAll("#text-link");
+		for (const link of links) {
+			link.innerHTML = "&lt;" + link.innerHTML + "&gt;";
+			link.addEventListener("mouseenter", this.linkMouseover);
+			link.addEventListener("mouseout", this.linkMouseout);
 		}
 
 		document.addEventListener('keypress', this.checkKeyboardInput);
@@ -84,8 +88,15 @@ class App {
 	notWorkSpanMouseout() {
 		this.notWorkButton.classList.remove('tab-not-work-active');
 	}
+	linkMouseover(event) {
+		const textLength = event.target.innerHTML.length;
+		event.target.innerHTML = "&lt; " + event.target.innerHTML.slice(4, textLength - 4) + " &gt;";
+	}
+	linkMouseout(event) {
+		const textLength = event.target.innerHTML.length;
+		event.target.innerHTML = "&lt;" + event.target.innerHTML.slice(5, textLength - 5) + "&gt;";
+	}
 	toggleContent(event) {
-		console.log("clicked");
 		if(event.target.id === "expand-panel-title") {
 			event.currentTarget.querySelector("#expand-panel-body").classList.toggle("inactive");
 			event.currentTarget.querySelector("#expand-panel-title").classList.toggle("expand-panel-title-active");
